@@ -1,3 +1,4 @@
+ruby '2.3.1'
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -58,3 +59,6 @@ gem 'bootstrap', '~> 4.0.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+
+# Add kaminari gem for pagination
+gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'

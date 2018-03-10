@@ -35,3 +35,35 @@ body {
   letter-spacing: -0.4px;
   color: #E81A1A;
 }
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #000000;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.page-link:hover {
+    color: #000000;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.page-item.active:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
