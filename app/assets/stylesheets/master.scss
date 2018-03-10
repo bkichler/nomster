@@ -26,5 +26,10 @@ body {
 .navbar {
   background: image_url('curls.png');
   box-shadow: 0px 1px 3px #2a2a2a;
+}
 
+.navbar-dark .navbar-brand {
+  font-family: 'allerbold', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
 }
