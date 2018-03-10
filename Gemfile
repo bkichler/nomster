@@ -62,3 +62,6 @@ end
 
 # Add kaminari gem for pagination
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
+
+# Add simple forms gem 
+gem 'simple_form'
