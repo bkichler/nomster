@@ -65,3 +65,6 @@ gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'ma
 
 # Add simple forms gem 
 gem 'simple_form'
+
+# Add font-awesome gem
+gem 'font-awesome-rails'
