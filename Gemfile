@@ -71,3 +71,9 @@ gem 'font-awesome-rails'
 
 # Add devise gem for authentication
 gem 'devise'
+
+# Add geocoder gemfile
+gem 'geocoder'
+
+# Add figaro gem to store ENV variables
+gem 'figaro'
