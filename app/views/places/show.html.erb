@@ -1,4 +1,4 @@
- <% if current_user && current_user == @place.user %>
+<% if current_user && current_user == @place.user %>
 <div class="booyah-box show col-10 offset-1"> 
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
@@ -18,7 +18,7 @@
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Hello World!'
+          title: '<%= @place.name %>'
         });
       }
     </script>
@@ -53,7 +53,7 @@
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Hello World!'
+          title: '<%= @place.name %>'
         });
       }
     </script>
