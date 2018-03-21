@@ -77,3 +77,6 @@ gem 'geocoder'
 
 # Add figaro gem to store ENV variables
 gem 'figaro'
+
+# Add carrierwave gem for photo storage
+gem 'carrierwave', '~> 1.0'
