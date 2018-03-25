@@ -109,3 +109,18 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+.photo {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+blockquote.caption-text {
+  font-size: 18pt;
+  padding: 0em 0px;
+  margin: 0.5em 5px;
+}
+
+.photo-header {
+  padding-bottom: 10px;
+}
