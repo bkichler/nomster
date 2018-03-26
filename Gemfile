@@ -80,3 +80,6 @@ gem 'figaro'
 
 # Add carrierwave gem for photo storage
 gem 'carrierwave', '~> 1.0'
+
+# Add fog-aws to communicate with AWS
+gem 'fog-aws'

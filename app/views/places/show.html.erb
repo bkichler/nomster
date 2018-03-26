@@ -76,8 +76,8 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
-        <% end %>
       </div>
+        <% end %>
     </div>
   </div>
 </div>
@@ -102,15 +102,15 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
-        <% end %>
       </div>
+        <% end %>
     </div>
   </div>
 </div>
 <br />
 <div class="col-10 offset-1">
   <h2 class="float-left"><%= "Comments about #{@place.name}" %></h2>
-  <!-- Button trigger modal -->
+  <!-- Comment trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#commentModal">
     Add a comment
   </button>
@@ -163,6 +163,21 @@
   <div id="map"></div>
   <% end %>
   <br />
+  <br />
+  <br />
+  <div class="col-10 offset-1 photo-header">
+    <h2 class="float-left"><%= "Photos for #{@place.name}" %></h2>
+  </div>
+<div class="clear"></clear>
+  <div class="row">
+    <div class="col-10 offset-1">
+      <% @place.photos.each do |photo| %>
+        <%= image_tag photo.picture, class: 'img-fluid rounded mx-auto photo' %>
+        <blockquote class="caption-text">
+        <b><%= photo.caption %></b>
+        </blockquote>
+      <% end %>
+    </div>
   </div>
 <div class="row">
   <% @place.comments.each do |comment| %>
@@ -176,5 +191,6 @@
       </blockquote>
     </div>
   <% end %>
+  
 </div>
 <% end %>
