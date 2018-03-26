@@ -40,9 +40,15 @@
   <div class="clear"></div>
   <br />
   <br />
+    <% if @place.photos.present? %>
   <div class="col-10 offset-1 photo-header">
     <h2 class="float-left"><%= "Photos for #{@place.name}" %></h2>
   </div>
+    <% else %>
+  <div class="col-12 photo-header">
+    <p class="float-left">No photos have been uploaded :/</p>
+  </div>
+    <% end %>
 <div class="clear"></clear>
   <div class="row">
     <div class="col-10 offset-1">
@@ -68,8 +74,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
       <div class="modal-body">
-        <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
           <%= f.input :picture, label: false %>
           <%= f.input :caption %>
       </div>
@@ -94,8 +100,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
       <div class="modal-body">
-        <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
           <%= f.input :message %>
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
       </div>
@@ -165,9 +171,15 @@
   <br />
   <br />
   <br />
+    <% if @place.photos.present? %>
   <div class="col-10 offset-1 photo-header">
     <h2 class="float-left"><%= "Photos for #{@place.name}" %></h2>
   </div>
+    <% else %>
+  <div class="col-12 photo-header">
+    <p class="float-left">No photos have been uploaded :/</p>
+  </div>
+    <% end %>
 <div class="clear"></clear>
   <div class="row">
     <div class="col-10 offset-1">
