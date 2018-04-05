@@ -1,4 +1,4 @@
-<% if current_user && current_user == @place.user %>
+<% if current_user.valid? %>
 <div class="booyah-box show col-10 offset-1"> 
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
