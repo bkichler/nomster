@@ -1,5 +1,4 @@
 Rails.application.configure do
-  config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
     address: 'smtp.sendgrid.net',
