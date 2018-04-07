@@ -27,7 +27,7 @@
   <div class="clear"></div>
 </div>
 <br /><br />
-<h1 class="text-center">My Comments</h1>
+<h2 class="text-center">My Comments</h2>
 <br /><br />
 <div class="row">
 <% @user.comments.each do |comment| %>
@@ -42,3 +42,24 @@
   </div>
 <% end %>
 </div>
+<br /><br />
+<div class="clear"></div>
+<h2 class="text-center">My Places</h2>
+<% if @user.places.present? %>
+<br /><br />
+<div class="row">
+<% @user.places.each do |place| %>
+  <div class="col-12">
+    <div class="booyah-box show col-10 offset-1"> 
+  <h1><%= link_to place.name, place_path(place) %></h1>
+  <i><%= place.address %></i>
+  <br /><br />
+  <p><%= place.description %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% else %>
+<br />
+<p><b>You haven't added any places yet! :/</b></p>
+<% end %>
